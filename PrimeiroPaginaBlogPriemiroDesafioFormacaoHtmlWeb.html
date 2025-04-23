@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Desafio BLOG:: Formação HTML Web :: Criar Uma Página (Blog) Web Utilizando as Tags Aprendidas</title>
+    </head>
+
+    <body>
+        <h1>Desafio BLOG :: Entendimento da aula das tags apreendidas e de outros tópicos</h1>
+        <hr>
+        <h2 id="Índice"><em>Índice</em></h2>
+        <ul>
+            <li><a href="#Ferramentas">Ferramentas utilizadas</a></li>
+            <li><a href="#Usando">Usando o Inspetor de Elementos</a></li>
+            <li><a href="#Estrutura">Estrutura básica do HTML</a></li>
+            <li><a href="#Falando">Falando sobre Tags</a></li>
+            <li><a href="#Atributos">Atributos básicos</a></li>
+            <li><a href="#Executando">Executando uma página HTML</a></li>
+            <li><a href="#Textos">Textos</a></li>
+            <li><a href="#Listas">Listas ordenadas e não ordenadas</a></li>
+            <li><a href="#Links">Links</a></li>
+            <li><a href="#Contato">Contato Instrutor</a></li>
+            <li><a href="#Bibliografia">Bibliografia e Sites Recomendados para HTML</a></li>
+        </ul>
+        <br>
+        <p><strong>*** Basicamente o instrutor explica de forma básica e coerente os pontos abaixo: ***</strong></p>
+        <br>
+        <h2 id="Ferramentas">Ferramentas utilizadas</h2>
+        <small><a href="#Índice">(<i>Voltar</i>)</a></small>
+        <br>
+        <h3>Instalação e Preparação do VS Code para HTML</h3>
+
+        <h4>Passo 1: Baixar o VS Code</h4>
+        <ol>
+            <li>Abra o seu navegador de internet (Chrome, Firefox, Edge, etc.).</li>
+            <li>Acesse o site oficial do Visual Studio Code: <a href="https://code.visualstudio.com/" target="_blank"
+                    rel="noopener noreferrer">https://code.visualstudio.com/</a></li>
+            <li>O site deve detectar automaticamente o seu sistema operacional e exibir o botão de download correto.
+            </li>
+            <li>Clique no botão para baixar a versão estável.</li>
+            <li>Aguarde o download do arquivo de instalação ser concluído.</li>
+        </ol>
+
+        <h4>Passo 2: Instalar o VS Code</h4>
+        <h5>Windows:</h5>
+        <ul>
+            <li>Localize o arquivo <code>.exe</code> baixado (geralmente em "Downloads").</li>
+            <li>Dê um duplo clique no arquivo para iniciar a instalação.</li>
+            <li>Leia e aceite o contrato de licença.</li>
+            <li>Clique em "Avançar" nas telas seguintes, mantendo as opções padrão.</li>
+            <li>Marque a opção "Adicionar ao PATH".</li>
+            <li>Clique em "Instalar" e aguarde a conclusão.</li>
+            <li>Clique em "Concluir" para abrir o VS Code.</li>
+        </ul>
+
+        <h5>macOS:</h5>
+        <ul>
+            <li>Localize o arquivo <code>.dmg</code> baixado (geralmente em "Downloads").</li>
+            <li>Dê um duplo clique no arquivo <code>.dmg</code>.</li>
+            <li>Arraste o ícone do VS Code para a pasta "Applications".</li>
+            <li>Abra a pasta "Applications" e clique duas vezes no ícone do Visual Studio Code para iniciá-lo.</li>
+        </ul>
+
+        <h5>Linux:</h5>
+        <ul>
+            <li>Escolha o arquivo adequado para sua distribuição (<code>.deb</code>, <code>.rpm</code>,
+                <code>.tar.gz</code>).
+            </li>
+            <li><strong>Para <code>.deb</code> (exemplo Ubuntu):</strong> Abra o terminal, navegue até a pasta e
+                execute: <code>sudo dpkg -i &lt;nome_do_arquivo&gt;.deb</code>, seguido de
+                <code>sudo apt-get update && sudo apt-get install -f</code>.
+            </li>
+            <li><strong>Para <code>.rpm</code> (exemplo Fedora):</strong> Abra o terminal, navegue até a pasta e
+                execute: <code>sudo rpm -i &lt;nome_do_arquivo&gt;.rpm</code>.</li>
+            <li><strong>Para <code>.tar.gz</code>:</strong> Descompacte e execute o arquivo <code>code</code> dentro da
+                pasta. Considere criar um link simbólico.</li>
+        </ul>
+
+        <h4>Passo 3: Preparar o VS Code para HTML</h4>
+        <ol>
+            <li><strong>Abrir uma pasta de projeto (recomendado):</strong>
+                <ul>
+                    <li>Crie uma pasta no seu computador (ex: "meu_projeto_web").</li>
+                    <li>Abra o VS Code.</li>
+                    <li>Vá em "Arquivo" (File) &gt; "Abrir Pasta..." (Open Folder...).</li>
+                    <li>Selecione a pasta e clique em "Selecionar Pasta" (Select Folder).</li>
+                </ul>
+            </li>
+            <li><strong>Criar um arquivo HTML:</strong>
+                <ul>
+                    <li>Na barra lateral esquerda, clique no ícone de "Novo Arquivo".</li>
+                    <li>Digite o nome do arquivo com a extensão <code>.html</code> (ex: <code>index.html</code>) e
+                        pressione Enter.</li>
+                </ul>
+            </li>
+            <li><strong>Escrever seu código HTML:</strong>
+                <ul>
+                    <li>Comece a digitar a estrutura HTML básica (experimente digitar <code>!</code> e pressionar
+                        <code>Tab</code>).
+                    </li>
+                    <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-br"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Minha Página HTML&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Olá, Mundo!&lt;/h1&gt;
+    &lt;p&gt;Este é meu primeiro código HTML no VS Code.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                </code></pre>
+                </ul>
+            </li>
+            <li><strong>Salvar o arquivo:</strong>
+                <ul>
+                    <li>Vá em "Arquivo" (File) &gt; "Salvar" (Save) ou pressione <code>Ctrl + S</code> (Windows/Linux) /
+                        <code>Cmd + S</code> (macOS).
+                    </li>
+                </ul>
+            </li>
+            <li><strong>Visualizar no navegador:</strong>
+                <ul>
+                    <li>Abra a pasta onde você salvou o arquivo <code>.html</code>.</li>
+                    <li>Dê um duplo clique no arquivo para abri-lo no navegador.</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h4>Dicas Extras para HTML no VS Code:</h4>
+        <ul>
+            <li><strong>Emmet:</strong> Já integrado, facilita a escrita de HTML e CSS com abreviações (ex: digite
+                <code>li*3</code> e pressione <code>Tab</code>).
+            </li>
+            <li><strong>Extensões (opcional, mas útil):</strong>
+                <ul>
+                    <li><strong>HTML CSS Support:</strong> Autocompletar para classes e IDs CSS.</li>
+                    <li><strong>Auto Rename Tag:</strong> Renomeia tags de abertura e fechamento simultaneamente.</li>
+                </ul>
+            </li>
+        </ul>
+        <br>
+        <h2 id="Usando">Usando o Inspetor de Elementos</h2>
+        <small><a href="#Índice">(<i>Voltar</i>)</a></small>
+        <p>O <strong>Inspetor de Elementos</strong> é uma ferramenta essencial, integrada diretamente nos navegadores
+            web modernos como Google Chrome, Mozilla Firefox, Microsoft Edge e Apple Safari. Ele serve como uma janela
+            para o "código de bastidores" de qualquer página web que você visita. Através dele, é possível examinar e
+            até mesmo modificar temporariamente a estrutura <strong>HTML</strong> (que define o conteúdo e a organização
+            dos elementos na página) e o <strong>CSS</strong> (que controla a apresentação visual desses elementos, como
+            cores, fontes e layout).</p>
+        <h3>Para que serve o Inspetor de Elementos?</h3>
+        <ul>
+            <li><strong>Entender a estrutura HTML:</strong> Ele permite visualizar a hierarquia de elementos HTML,
+                mostrando como as diferentes tags estão aninhadas e organizadas para formar a página. Você pode expandir
+                e recolher nós para explorar a estrutura em detalhes.</li>
+            <li><strong>Analisar o CSS aplicado:</strong> Para cada elemento HTML selecionado, o Inspetor de Elementos
+                exibe as regras de CSS que estão afetando sua aparência. Isso inclui estilos definidos em arquivos CSS
+                externos, dentro da tag <code>&lt;style&gt;</code> no próprio HTML e estilos inline (no atributo
+                <code>style</code>).
+            </li>
+            <li><strong>Modificação em tempo real:</strong> Uma das funcionalidades mais poderosas é a capacidade de
+                editar o HTML e o CSS diretamente na interface do Inspetor. As alterações são refletidas
+                instantaneamente na visualização da página no seu navegador. É importante lembrar que essas modificações
+                são apenas locais e temporárias; ao recarregar a página, o conteúdo original é restaurado.</li>
+            <li><strong>Depuração de Layout e Estilo:</strong> Se um elemento não está aparecendo ou se comportando como
+                esperado visualmente, o Inspetor de Elementos ajuda a identificar quais regras de CSS estão causando o
+                problema. Você pode desativar ou modificar estilos para testar diferentes soluções.</li>
+            <li><strong>Aprendizado e Inspeção de Outros Sites:</strong> Ao navegar por diferentes sites, você pode usar
+                o Inspetor de Elementos para aprender como eles são construídos e estilizados. Isso pode ser uma ótima
+                fonte de inspiração e conhecimento.</li>
+            <li><strong>Análise de Desempenho (em algumas abas):</strong> Ferramentas relacionadas no mesmo conjunto
+                (como a aba "Rede" ou "Performance") permitem analisar o tempo de carregamento de recursos e outros
+                aspectos do desempenho da página.</li>
+        </ul>
+        <h3>Como acessar o Inspetor de Elementos?</h3>
+        <p>Existem várias maneiras de abrir o Inspetor de Elementos:</p>
+        <ol>
+            <li><strong>Clique com o botão direito do mouse:</strong> A maneira mais comum é clicar com o botão direito
+                sobre o elemento específico que você deseja examinar (ou em qualquer lugar da página) e selecionar a
+                opção <strong>"Inspecionar"</strong> ou <strong>"Inspecionar Elemento"</strong> no menu de contexto que
+                aparece.</li>
+            <li><strong>Atalhos de teclado:</strong> A maioria dos navegadores oferece atalhos de teclado para abrir o
+                Inspetor de Elementos:
+                <ul>
+                    <li><strong>Google Chrome, Microsoft Edge, Brave:</strong> Pressione a tecla <code>F12</code> ou a
+                        combinação de teclas <code>Ctrl + Shift + I</code> (no Windows e Linux) ou
+                        <code>Cmd + Option + I</code> (no macOS).
+                    </li>
+                    <li><strong>Mozilla Firefox:</strong> Pressione a tecla <code>F12</code> ou a combinação de teclas
+                        <code>Ctrl + Shift + I</code> (no Windows e Linux) ou <code>Cmd + Option + I</code> (no macOS).
+                    </li>
+                    <li><strong>Apple Safari:</strong> Primeiro, você precisa ativar o menu "Desenvolvedor" nas
+                        preferências do Safari. Vá em "Safari" &gt; "Preferências..." &gt; "Avançado" e marque a caixa
+                        "Mostrar menu Desenvolvedor na barra de menus". Depois disso, você pode clicar com o botão
+                        direito e selecionar "Inspecionar Elemento" ou usar o atalho <code>Option + Cmd + I</code>.</li>
+                </ul>
+            </li>
+        </ol>
+        <h3>O que você vê ao abrir o Inspetor de Elementos?</h3>
+        <p>Ao abrir o Inspetor, geralmente você verá a janela do navegador dividida em duas seções principais:</p>
+        <ul>
+            <li><strong>Aba "Elementos" (ou "Elements"):</strong> Esta aba mostra a estrutura HTML da página como uma
+                árvore hierárquica de elementos. Você pode navegar por essa árvore, expandindo e recolhendo os nós para
+                ver a relação entre as tags. Ao selecionar um elemento nesta aba, ele é destacado visualmente na página
+                web.</li>
+            <li><strong>Aba "Estilos" (ou "Styles"):</strong> Localizada geralmente ao lado ou abaixo da aba
+                "Elementos", esta seção exibe as regras de CSS que estão sendo aplicadas ao elemento atualmente
+                selecionado na aba "Elementos". Você pode ver as propriedades CSS, seus valores, e em qual arquivo ou
+                tag de estilo cada regra está definida.</li>
+        </ul>
+
+        <h3>Em resumo:</h3>
+        <p>O <strong>Inspetor de Elementos</strong> é uma ferramenta indispensável para qualquer pessoa que trabalha com
+            desenvolvimento web. Ele oferece uma visão profunda de como as páginas são construídas e estilizadas,
+            permitindo inspeção, análise e experimentação em tempo real.</p>
+
+        <br>
+        <h2 id="Estrutura">Estrutura básica do HTML</h2>
+        <small><a href="#Índice">(<i>Voltar</i>)</a></small>
+        <h3>O que é a estrutura básica do HTML?</h3>
+        <p>Todo documento HTML válido segue uma estrutura fundamental. Essa estrutura garante que o navegador entenda
+            como
+            interpretar e exibir o conteúdo da página corretamente. Os elementos essenciais são:</p>
+        <ul>
+            <li><strong><code>&lt;!DOCTYPE html&gt;</code>:</strong> A declaração <code>DOCTYPE</code> informa ao
+                navegador
+                que este é um documento HTML5. Deve ser a primeira linha do seu código HTML.</li>
+            <li><strong><code>&lt;html&gt;</code>:</strong> A tag <code>&lt;html&gt;</code> é o elemento raiz de toda
+                página
+                HTML. Todos os outros elementos (exceto a declaração <code>DOCTYPE</code>) devem estar dentro desta tag.
+                O atributo <code>lang</code> dentro da tag <code>&lt;html&gt;</code> especifica o idioma principal do
+                documento (por exemplo, <code>lang="pt-br"</code> para português do Brasil).</li>
+            <li><strong><code>&lt;head&gt;</code>:</strong> A tag <code>&lt;head&gt;</code> contém metadados sobre o
+                documento
+                HTML, que não são exibidos diretamente na página. Informações como o título da página (que aparece na
+                aba
+                do navegador), a codificação de caracteres, informações para SEO e links para arquivos CSS são colocados
+                dentro da tag <code>&lt;head&gt;</code>.</li>
+            <li><strong><code>&lt;body&gt;</code>:</strong> A tag <code>&lt;body&gt;</code> contém todo o conteúdo
+                visível da
+                página HTML, como textos, imagens, links, vídeos e outros elementos interativos.</li>
+        </ul>
+        <h3>Exemplo de estrutura básica:</h3>
+        <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-br"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Título da Página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Aqui vai o conteúdo visível da sua página --&gt;
+    &lt;h1&gt;Meu Primeiro Título&lt;/h1&gt;
+    &lt;p&gt;Este é um parágrafo.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </code></pre>
+        <br>
+        <h2 id="Falando">Falando sobre Tags</h2>
+        <small><a href="#Índice">(<i>Voltar</i>)</a></small>
+        <p>As <strong>tags HTML</strong> são os blocos de construção fundamentais de uma página web. Elas são usadas
+            para marcar e estruturar o conteúdo, informando ao navegador como exibir cada elemento.</p>
+
+        <h3>Principais Conceitos:</h3>
+        <ul>
+            <li><strong>Estrutura:</strong> A maioria das tags HTML vêm em pares: uma <strong>tag de abertura</strong>
+                (ex: <code>&lt;p&gt;</code>) e uma <strong>tag de fechamento</strong> (ex: <code>&lt;/p&gt;</code>). O
+                conteúdo fica entre elas.</li>
+            <li><strong>Função:</strong> Cada tag tem um significado semântico e define o tipo de conteúdo que ela
+                envolve (texto, imagem, link, lista, etc.).</li>
+            <li><strong>Atributos:</strong> As tags podem ter atributos que fornecem informações adicionais sobre o
+                elemento (ex: <code>&lt;a href="url"&gt;</code>, onde <code>href</code> é um atributo).</li>
+            <li><strong>Estrutura Básica:</strong> Todo documento HTML começa com <code>&lt;!DOCTYPE html&gt;</code>,
+                seguido pela tag <code>&lt;html&gt;</code> que envolve as seções <code>&lt;head&gt;</code> (metadados) e
+                <code>&lt;body&gt;</code> (conteúdo visível).
+            </li>
+            <li><strong>Tags Essenciais:</strong> Algumas tags são cruciais para a estrutura e conteúdo, como
+                <code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code> (cabeçalhos), <code>&lt;p&gt;</code> (parágrafos),
+                <code>&lt;a&gt;</code> (links), <code>&lt;img&gt;</code> (imagens), <code>&lt;ul&gt;</code> e
+                <code>&lt;ol&gt;</code> (listas), e <code>&lt;li&gt;</code> (itens de lista).
+            </li>
+            <li><strong>Organização e Semântica:</strong> Usar as tags corretas ajuda a organizar o conteúdo de forma
+                lógica e fornece significado semântico para os navegadores e mecanismos de busca. Tags como
+                <code>&lt;article&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;aside&gt;</code> e
+                <code>&lt;footer&gt;</code> ajudam a definir a estrutura do conteúdo.
+            </li>
+            <li><strong>Estilização:</strong> Embora a estrutura seja definida pelo HTML, a apresentação visual é
+                controlada principalmente pelo CSS (Cascading Style Sheets). As tags HTML servem como "ganchos" para
+                aplicar estilos.</li>
+        </ul>
+        <h3>Em resumo:</h3>
+        <p>As tags HTML são a linguagem fundamental para criar páginas web. Elas estruturam o conteúdo, definem seu
+            significado e permitem a criação de documentos interativos e bem organizados. Entender as principais tags e
+            seus usos é o primeiro passo essencial no desenvolvimento web.</p>
+        <br>
+        <h3>Principais Tags HTML e o que fazem:</h3>
+        <ul>
+            <li>
+                <h4><code>&lt;!DOCTYPE html&gt;</code></h4>
+                <p><strong>O que faz:</strong> Declara o tipo de documento como HTML5. Deve ser a primeira linha de todo
+                    documento HTML.</p>
+            </li>
+            <li>
+                <h4><code>&lt;html&gt;</code></h4>
+                <p><strong>O que faz:</strong> Define a raiz do documento HTML. Todos os outros elementos HTML devem
+                    estar dentro desta tag.</p>
+                <p><strong>Atributos comuns:</strong> <code>lang</code> (especifica o idioma do documento).</p>
+            </li>
+            <li>
+                <h4><code>&lt;head&gt;</code></h4>
+                <p><strong>O que faz:</strong> Contém metadados sobre o documento HTML, como o título da página, links
+                    para folhas de estilo CSS, etc. As informações dentro de <code>&lt;head&gt;</code> não são exibidas
+                    diretamente na página.</p>
+                <p><strong>Tags comuns dentro de <code>&lt;head&gt;</code>:</strong> <code>&lt;meta&gt;</code>,
+                    <code>&lt;title&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;style&gt;</code>.
+                </p>
+            </li>
+            <li>
+                <h4><code>&lt;meta&gt;</code></h4>
+                <p><strong>O que faz:</strong> Fornece metadados sobre o documento HTML. Pode especificar o conjunto de
+                    caracteres, a viewport, a descrição, palavras-chave, o autor e outras informações.</p>
+                <p><strong>Atributos comuns:</strong> <code>charset</code>, <code>name</code>, <code>content</code>.</p>
+            </li>
+            <li>
+                <h4><code>&lt;title&gt;</code></h4>
+                <p><strong>O que faz:</strong> Define o título do documento que aparece na aba do navegador ou na barra
+                    de título da janela.</p>
+            </li>
+            <li>
+                <h4><code>&lt;body&gt;</code></h4>
+                <p><strong>O que faz:</strong> Contém todo o conteúdo visível da página HTML (textos, imagens, links,
+                    etc.).</p>
+            </li>
+            <li>
+                <h4><code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code></h4>
+                <p><strong>O que fazem:</strong> Definem os cabeçalhos HTML. <code>&lt;h1&gt;</code> representa o
+                    cabeçalho mais importante e <code>&lt;h6&gt;</code> o menos importante.</p>
+            </li>
+            <li>
+                <h4><code>&lt;p&gt;</code></h4>
+                <p><strong>O que faz:</strong> Define um parágrafo.</p>
+            </li>
+            <li>
+                <h4><code>&lt;a&gt;</code></h4>
+                <p><strong>O que faz:</strong> Define um hiperlink (âncora) para outras páginas ou locais dentro da
+                    mesma página.</p>
+                <p><strong>Atributos comuns:</strong> <code>href</code> (especifica o destino do link),
+                    <code>target</code> (especifica onde abrir o link), <code>rel</code>.
+                </p>
+            </li>
+            <li>
+                <h4><code>&lt;img&gt;</code></h4>
+                <p><strong>O que faz:</strong> Incorpora uma imagem na página.</p>
+                <p><strong>Atributos obrigatórios:</strong> <code>src</code> (especifica o caminho para a imagem),
+                    <code>alt</code> (fornece um texto alternativo para a imagem).
+                </p>
+            </li>
+            <li>
+                <h4><code>&lt;ul&gt;</code></h4>
+                <p><strong>O que faz:</strong> Define uma lista não ordenada (com marcadores).</p>
+                <p><strong>Tags filhas comuns:</strong> <code>&lt;li&gt;</code> (define um item da lista).</p>
+            </li>
+            <li>
+                <h4><code>&lt;ol&gt;</code></h4>
+                <p><strong>O que faz:</strong> Define uma lista ordenada (com números ou letras).</p>
+                <p><strong>Tags filhas comuns:</strong> <code>&lt;li&gt;</code> (define um item da lista).</p>
+            </li>
+            <li>
+                <h4><code>&lt;li&gt;</code></h4>
+                <p><strong>O que faz:</strong> Define um item de lista dentro de listas <code>&lt;ul&gt;</code> ou
+                    <code>&lt;ol&gt;</code>.
+                </p>
+            </li>
+            <li>
+                <h4><code>&lt;div&gt;</code></h4>
+                <p><strong>O que faz:</strong> Define uma seção ou um container para elementos HTML. É usado para
+                    estruturar o layout da página e aplicar estilos CSS.</p>
+            </li>
+            <li>
+                <h4><code>&lt;span&gt;</code></h4>
+                <p><strong>O que faz:</strong> É um container inline usado para marcar partes de texto ou outros
+                    elementos inline para aplicar estilos CSS ou manipular com JavaScript.</p>
+            </li>
+            <li>
+                <h4><code>&lt;strong&gt;</code></h4>
+                <p><strong>O que faz:</strong> Define texto com forte importância, geralmente exibido em negrito.</p>
+            </li>
+            <li>
+                <h4><code>&lt;em&gt;</code></h4>
+                <p><strong>O que faz:</strong> Define texto enfatizado, geralmente exibido em itálico.</p>
+            </li>
+            <li>
+                <h4><code>&lt;br&gt;</code></h4>
+                <p><strong>O que faz:</strong> Insere uma quebra de linha simples.</p>
+            </li>
+            <li>
+                <h4><code>&lt;hr&gt;</code></h4>
+                <p><strong>O que faz:</strong> Define uma linha horizontal para separar conteúdo.</p>
+            </li>
+            <li>
+                <h4><code>&lt;small&gt;</code></h4>
+                <p><strong>O que faz:</strong> Define texto menor.</p>
+            </li>
+            <li>
+                <h4><code>&lt;pre&gt;</code></h4>
+                <p><strong>O que faz:</strong> Define texto pré-formatado. O texto dentro desta tag é exibido com uma
+                    fonte de largura fixa e preserva espaços e quebras de linha.</p>
+            </li>
+            <li>
+                <h4><code>&lt;code&gt;</code></h4>
+                <p><strong>O que faz:</strong> Define um trecho de código de computador.</p>
+            </li>
+            <li>
+                <h4><code>&lt;aside&gt;</code></h4>
+                <p><strong>O que faz:</strong> Define conteúdo relacionado ao conteúdo principal, mas que pode ser
+                    considerado separado (como barras laterais, citações, etc.).</p>
+            </li>
+            <li>
+                <h4><code>&lt;!DOCTYPE html&gt;</code></h4>
+                <p><strong>Utilização:</strong> Usada no início do seu documento HTML para declarar a versão do HTML.
+                </p>
+            </li>
+            <li>
+                <h4><code>&lt;html&gt;</code></h4>
+                <p><strong>Utilização:</strong> Envolve todo o conteúdo da sua página HTML.</p>
+                <p><strong>Atributo utilizado:</strong> <code>lang="pt-br"</code> para definir o idioma português do
+                    Brasil.</p>
+            </li>
+            <li>
+                <h4><code>&lt;head&gt;</code></h4>
+                <p><strong>Utilização:</strong> Contém informações como o conjunto de caracteres e a viewport.</p>
+            </li>
+            <li>
+                <h4><code>&lt;meta charset="UTF-8"&gt;</code></h4>
+                <p><strong>Utilização:</strong> Define a codificação de caracteres para UTF-8.</p>
+            </li>
+            <li>
+                <h4><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></h4>
+                <p><strong>Utilização:</strong> Configura a viewport para responsividade.</p>
+            </li>
+            <li>
+                <h4><code>&lt;title&gt;</code></h4>
+                <p><strong>Utilização:</strong> Define o título da sua página.</p>
+            </li>
+            <li>
+                <h4><code>&lt;body&gt;</code></h4>
+                <p><strong>Utilização:</strong> Contém todo o conteúdo visível da sua página.</p>
+            </li>
+            <li>
+                <h4><code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, <code>&lt;h4&gt;</code>,
+                    <code>&lt;h5&gt;</code>
+                </h4>
+                <p><strong>Utilização:</strong> Usadas para criar os títulos e subtítulos do seu blog.</p>
+            </li>
+            <li>
+                <h4><code>&lt;hr&gt;</code></h4>
+                <p><strong>Utilização:</strong> Usada para criar uma linha horizontal separando seções.</p>
+            </li>
+            <li>
+                <h4><code>&lt;em&gt;</code></h4>
+                <p><strong>Utilização:</strong> Usada para enfatizar texto (geralmente itálico) no seu índice.</p>
+            </li>
+            <li>
+                <h4><code>&lt;ul&gt;</code></h4>
+                <p><strong>Utilização:</strong> Usada para criar a lista não ordenada do seu índice.</p>
+            </li>
+            <li>
+                <h4><code>&lt;li&gt;</code></h4>
+                <p><strong>Utilização:</strong> Usada para definir cada item da lista no seu índice.</p>
+            </li>
+            <li>
+                <h4><code>&lt;a&gt;</code></h4>
+                <p><strong>Utilização:</strong> Usada para criar os links de navegação no seu índice e os links
+                    externos.</p>
+                <p><strong>Atributos utilizados:</strong> <code>href</code> (para o destino do link),
+                    <code>target="_blank"</code> (para abrir em nova aba), <code>rel="noopener noreferrer"</code> (para
+                    segurança).
+                </p>
+            </li>
+            <li>
+                <h4><code>&lt;br&gt;</code></h4>
+                <p><strong>Utilização:</strong> Usada para inserir quebras de linha.</p>
+            </li>
+            <li>
+                <h4><code>&lt;small&gt;</code></h4>
+                <p><strong>Utilização:</strong> Usada para exibir o texto "Voltar" em tamanho menor.</p>
+            </li>
+            <li>
+                <h4><code>&lt;p&gt;</code></h4>
+                <p><strong>Utilização:</strong> Usada para criar os parágrafos de texto do seu blog.</p>
+            </li>
+            <li>
+                <h4><code>&lt;strong&gt;</code></h4>
+                <p><strong>Utilização:</strong> Usada para destacar texto importante em negrito.</p>
+            </li>
+            <li>
+                <h4><code>&lt;code&gt;</code></h4>
+                <p><strong>Utilização:</strong> Usada para exibir trechos de código.</p>
+            </li>
+            <li>
+                <h4><code>&lt;pre&gt;</code></h4>
+                <p><strong>Utilização:</strong> Usada para exibir texto pré-formatado, preservando espaços e quebras de
+                    linha (útil para código).</p>
+            </li>
+            <li>
+                <h4><code>&lt;span&gt;</code></h4>
+                <p><strong>Utilização:</strong> Usada como um container inline para aplicar estilos (como a cor no seu
+                    "@").</p>
+            </li>
+            <li>
+                <h4><code>&lt;ol&gt;</code></h4>
+                <p><strong>Utilização:</strong> Usada para criar listas ordenadas (como os passos de instalação do VS
+                    Code).</p>
+            </li>
+        </ul>
+
+        <br>
+        <h2 id="Atributos">Atributos básicos</h2>
+        <small><a href="#Índice">(<i>Voltar</i>)</a></small>
+
+        <p>Os <strong>atributos HTML</strong> são palavras-chave especiais usadas dentro da tag de abertura de um
+            elemento HTML para fornecer informações adicionais sobre ele. Eles modificam o comportamento ou a aparência
+            padrão dos elementos.</p>
+
+        <h3>Anatomia de um Atributo:</h3>
+        <p>Um atributo consiste em duas partes:</p>
+        <ul>
+            <li><strong>Nome do Atributo:</strong> Uma palavra que identifica a informação adicional que você deseja
+                fornecer (ex: <code>href</code>, <code>src</code>, <code>class</code>, <code>id</code>).</li>
+            <li><strong>Valor do Atributo:</strong> O valor que você atribui ao atributo, geralmente entre aspas duplas
+                (<code>"</code>) ou simples (<code>'</code>) (ex: <code>"https://www.exemplo.com"</code>,
+                <code>"minha-classe"</code>).
+            </li>
+        </ul>
+        <p>A sintaxe básica é: <code>&lt;nomeDaTag nomeDoAtributo="valorDoAtributo"&gt;Conteúdo&lt;/nomeDaTag&gt;</code>
+        </p>
+
+        <h3>Principais Atributos Básicos e seus Usos:</h3>
+        <ul>
+            <li>
+                <h4><code>id</code></h4>
+                <p><strong>O que faz:</strong> Define um identificador único para um elemento HTML dentro de um
+                    documento. O valor do atributo <code>id</code> deve ser único em toda a página.</p>
+                <p><strong>Uso:</strong> Usado para estilizar um elemento específico com CSS ou para manipulá-lo com
+                    JavaScript.</p>
+                <p><strong>Exemplo:</strong> <code>&lt;div id="principal"&gt;...&lt;/div&gt;</code></p>
+            </li>
+            <li>
+                <h4><code>class</code></h4>
+                <p><strong>O que faz:</strong> Especifica uma ou mais nomes de classe para um elemento HTML. As classes
+                    são usadas para aplicar os mesmos estilos CSS a múltiplos elementos ou para selecionar grupos de
+                    elementos com JavaScript.</p>
+                <p><strong>Uso:</strong> Principalmente para estilização com CSS.</p>
+                <p><strong>Exemplo:</strong> <code>&lt;p class="texto-importante texto-azul"&gt;...&lt;/p&gt;</code>
+                    (múltiplas classes separadas por espaços)</p>
+            </li>
+            <li>
+                <h4><code>style</code></h4>
+                <p><strong>O que faz:</strong> Permite adicionar estilos CSS inline diretamente a um elemento HTML.</p>
+                <p><strong>Uso:</strong> Geralmente usado para aplicar estilos específicos e únicos a um elemento. Para
+                    estilos mais complexos e reutilizáveis, é preferível usar CSS em folhas de estilo separadas ou
+                    dentro da tag <code>&lt;style&gt;</code>.</p>
+                <p><strong>Exemplo:</strong> <code>&lt;p style="color: green; font-size: 16px;"&gt;...&lt;/p&gt;</code>
+                </p>
+            </li>
+            <li>
+                <h4><code>href</code></h4>
+                <p><strong>O que faz:</strong> Especifica o destino (URL) de um hiperlink.</p>
+                <p><strong>Uso:</strong> Usado na tag <code>&lt;a&gt;</code> para criar links para outras páginas ou
+                    recursos.</p>
+                <p><strong>Exemplo:</strong> <code>&lt;a href="https://www.exemplo.com"&gt;Clique aqui&lt;/a&gt;</code>
+                </p>
+            </li>
+            <li>
+                <h4><code>src</code></h4>
+                <p><strong>O que faz:</strong> Especifica o caminho (URL) para um recurso externo, como uma imagem ou um
+                    script.</p>
+                <p><strong>Uso:</strong> Usado nas tags <code>&lt;img&gt;</code> e <code>&lt;script&gt;</code>.</p>
+                <p><strong>Exemplo (imagem):</strong>
+                    <code>&lt;img src="imagem.jpg" alt="Descrição da imagem"&gt;</code>
+                </p>
+                <p><strong>Exemplo (script):</strong> <code>&lt;script src="script.js"&gt;&lt;/script&gt;</code></p>
+            </li>
+            <li>
+                <h4><code>alt</code></h4>
+                <p><strong>O que faz:</strong> Fornece um texto alternativo para uma imagem. Este texto é exibido se a
+                    imagem não puder ser carregada e é importante para acessibilidade (leitores de tela).</p>
+                <p><strong>Uso:</strong> Usado na tag <code>&lt;img&gt;</code>.</p>
+                <p><strong>Exemplo:</strong> <code>&lt;img src="imagem.jpg" alt="Logotipo da empresa"&gt;</code></p>
+            </li>
+            <li>
+                <h4><code>title</code></h4>
+                <p><strong>O que faz:</strong> Define um texto que é exibido como uma dica de ferramenta (tooltip)
+                    quando o mouse passa sobre o elemento.</p>
+                <p><strong>Uso:</strong> Pode ser usado em várias tags para fornecer informações adicionais.</p>
+                <p><strong>Exemplo (link):</strong>
+                    <code>&lt;a href="#" title="Link para a página inicial"&gt;Home&lt;/a&gt;</code>
+                </p>
+            </li>
+            <li>
+                <h4><code>lang</code></h4>
+                <p><strong>O que faz:</strong> Especifica o idioma do conteúdo do elemento.</p>
+                <p><strong>Uso:</strong> Usado na tag <code>&lt;html&gt;</code> para definir o idioma principal da
+                    página e em outras tags para indicar o idioma de partes específicas do conteúdo.</p>
+                <p><strong>Exemplo (idioma da página):</strong> <code>&lt;html lang="pt-br"&gt;</code></p>
+                <p><strong>Exemplo (idioma de uma citação):</strong>
+                    <code>&lt;blockquote lang="en"&gt;...&lt;/blockquote&gt;</code>
+                </p>
+            </li>
+            <li>
+                <h4><code>target</code></h4>
+                <p><strong>O que faz:</strong> Especifica onde abrir o link.</p>
+                <p><strong>Uso:</strong> Usado na tag <code>&lt;a&gt;</code>.</p>
+                <p><strong>Valores comuns:</strong> <code>_blank</code> (abre em uma nova janela ou aba),
+                    <code>_self</code> (abre na mesma janela/aba - padrão), <code>_parent</code>, <code>_top</code>
+                    (relacionados a frames).
+                </p>
+                <p><strong>Exemplo:</strong>
+                    <code>&lt;a href="https://www.exemplo.com" target="_blank"&gt;Abrir em nova aba&lt;/a&gt;</code>
+                </p>
+            </li>
+            <li>
+                <h4><code>rel</code></h4>
+                <p><strong>O que faz:</strong> Especifica a relação entre o documento atual e o documento vinculado.</p>
+                <p><strong>Uso:</strong> Mais comumente usado na tag <code>&lt;a&gt;</code> e <code>&lt;link&gt;</code>.
+                </p>
+                <p><strong>Valores comuns:</strong> <code>noopener</code>, <code>noreferrer</code>,
+                    <code>nofollow</code>, <code>stylesheet</code>.
+                </p>
+                <p><strong>Exemplo:</strong>
+                    <code>&lt;a href="https://www.exemplo.com" target="_blank" rel="noopener noreferrer"&gt;Link seguro&lt;/a&gt;</code>
+                </p>
+            </li>
+        </ul>
+
+        <h3>Considerações Importantes:</h3>
+        <ul>
+            <li>Os nomes dos atributos geralmente são escritos em minúsculas.</li>
+            <li>Os valores dos atributos devem ser colocados entre aspas (duplas ou simples). É uma boa prática ser
+                consistente.</li>
+            <li>Alguns atributos são específicos para certas tags (ex: <code>href</code> só faz sentido na tag
+                <code>&lt;a&gt;</code>).
+            </li>
+            <li>Usar atributos semanticamente corretos e para seus devidos propósitos é importante para a acessibilidade
+                e SEO.</li>
+        </ul>
+
+        <p>Entender e usar corretamente os atributos básicos é fundamental para construir páginas HTML bem estruturadas
+            e funcionais.</p>
+
+        <br>
+        <h2 id="Executando">Executando uma página HTML</h2>
+        <small><a href="#Índice">(<i>Voltar</i>)</a></small>
+
+        <p>Executar uma página HTML é o processo de visualizar o código HTML que você escreveu em um navegador web. Os
+            navegadores são projetados para interpretar o código HTML, CSS e JavaScript e renderizar a página
+            visualmente para o usuário.</p>
+
+        <h3>Passos para Executar uma Página HTML:</h3>
+        <ol>
+            <li>
+                <h4>Salvar o Arquivo HTML:</h4>
+                <p>Primeiro, você precisa salvar o seu código HTML em um arquivo com a extensão <code>.html</code>. Por
+                    exemplo, você pode nomear o arquivo como <code>index.html</code>, <code>pagina.html</code> ou
+                    qualquer outro nome que desejar, contanto que termine com <code>.html</code>.</p>
+                <p><strong>Exemplo:</strong> Se você estiver usando um editor de texto como o VS Code, após escrever seu
+                    código, vá em "Arquivo" (File) &gt; "Salvar" (Save) e escolha um nome para o arquivo com a extensão
+                    <code>.html</code>.
+                </p>
+            </li>
+            <li>
+                <h4>Abrir o Arquivo HTML no Navegador:</h4>
+                <p>Existem algumas maneiras de fazer isso:</p>
+                <ul>
+                    <li>
+                        <h5>Usando o Explorador de Arquivos (Windows) ou Finder (macOS):</h5>
+                        <ol type="a">
+                            <li>Localize o arquivo <code>.html</code> que você salvou no seu computador.</li>
+                            <li>Dê um <strong>duplo clique</strong> no arquivo.</li>
+                            <li>O seu navegador padrão será aberto automaticamente e exibirá o conteúdo da sua página
+                                HTML.</li>
+                        </ol>
+                    </li>
+                    <li>
+                        <h5>Arrastando e Soltando:</h5>
+                        <ol type="a">
+                            <li>Abra o seu navegador web.</li>
+                            <li>Localize o arquivo <code>.html</code> no seu computador.</li>
+                            <li>Clique no arquivo e, mantendo o botão do mouse pressionado, arráste-o para a janela do
+                                navegador e solte-o.</li>
+                            <li>O navegador carregará e exibirá a página HTML.</li>
+                        </ol>
+                    </li>
+                    <li>
+                        <h5>Usando a opção "Abrir Arquivo" do Navegador:</h5>
+                        <ol type="a">
+                            <li>Abra o seu navegador web.</li>
+                            <li>Procure pela opção de "Arquivo" (File) no menu do navegador (geralmente no canto
+                                superior esquerdo).</li>
+                            <li>Clique em "Abrir Arquivo" (Open File) ou um termo similar.</li>
+                            <li>Uma janela de diálogo será aberta para você procurar o arquivo <code>.html</code> no seu
+                                computador.</li>
+                            <li>Selecione o arquivo e clique em "Abrir".</li>
+                            <li>O navegador carregará e exibirá a página HTML.</li>
+                        </ol>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h4>Visualizar o Resultado:</h4>
+                <p>Após abrir o arquivo <code>.html</code> no navegador, você verá a página web sendo renderizada de
+                    acordo com as tags HTML que você escreveu. Textos aparecerão, imagens serão exibidas, links estarão
+                    clicáveis e a estrutura da página será apresentada.</p>
+            </li>
+            <li>
+                <h4>Inspecionar o Código (Opcional, mas Recomendado para Desenvolvimento):</h4>
+                <p>Enquanto a página está aberta no navegador, você pode usar o <strong>Inspetor de Elementos</strong>
+                    (como explicado anteriormente) para ver o código HTML que o navegador interpretou e os estilos CSS
+                    que foram aplicados. Isso é fundamental para depurar e entender como a página está sendo
+                    renderizada.</p>
+                <p>Para abrir o Inspetor de Elementos, clique com o botão direito em qualquer lugar da página e
+                    selecione "Inspecionar" ou "Inspecionar Elemento" (o texto exato pode variar dependendo do
+                    navegador), ou use os atalhos de teclado (F12, Ctrl+Shift+I, Cmd+Option+I).</p>
+            </li>
+        </ol>
+
+        <h3>Em Resumo:</h3>
+        <p>Executar uma página HTML é simplesmente abrir o arquivo <code>.html</code> com um navegador web. O navegador
+            fará o trabalho de ler e exibir o conteúdo da sua página para o usuário.</p>
+
+        <br>
+        <h2 id="Textos">Textos</h2>
+        <small><a href="#Índice">(<i>Voltar</i>)</a></small>
+
+        <p>O HTML oferece diversas tags para estruturar e formatar textos em páginas web. A escolha da tag correta é
+            importante tanto para a apresentação visual quanto para a semântica do documento, facilitando a
+            interpretação por navegadores, mecanismos de busca e leitores de tela.</p>
+
+        <h3>Principais Tags para Textos:</h3>
+        <ul>
+            <li>
+                <h4><code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code> (Cabeçalhos):</h4>
+                <p>As tags de cabeçalho (heading) são usadas para definir títulos e subtítulos dentro do seu conteúdo.
+                    <code>&lt;h1&gt;</code> representa o cabeçalho de nível mais alto (mais importante), enquanto
+                    <code>&lt;h6&gt;</code> representa o nível mais baixo.
+                </p>
+                <p><strong>Exemplo:</strong></p>
+                <pre><code>
+    &lt;h1&gt;Título Principal da Página&lt;/h1&gt;
+    &lt;h2&gt;Subtítulo da Seção&lt;/h2&gt;
+    &lt;h3&gt;Título de um Subtópico&lt;/h3&gt;
+                </code></pre>
+            </li>
+            <li>
+                <h4><code>&lt;p&gt;</code> (Parágrafo):</h4>
+                <p>A tag <code>&lt;p&gt;</code> é usada para agrupar blocos de texto em parágrafos. Os navegadores
+                    geralmente adicionam uma linha em branco antes e depois de cada parágrafo.</p>
+                <p><strong>Exemplo:</strong></p>
+                <pre><code>
+    &lt;p&gt;Este é o primeiro parágrafo do nosso texto. Ele pode conter várias frases e informações sobre o assunto.&lt;/p&gt;
+    &lt;p&gt;Aqui temos um segundo parágrafo, que aborda um aspecto diferente do tema principal.&lt;/p&gt;
+                </code></pre>
+            </li>
+            <li>
+                <h4><code>&lt;br&gt;</code> (Quebra de Linha):</h4>
+                <p>A tag <code>&lt;br&gt;</code> (break line) insere uma quebra de linha simples no texto. É útil quando
+                    você precisa iniciar uma nova linha sem iniciar um novo parágrafo.</p>
+                <p><strong>Observação:</strong> Use <code>&lt;br&gt;</code> com moderação. Para estruturar o conteúdo,
+                    geralmente é mais adequado usar parágrafos (<code>&lt;p&gt;</code>).</p>
+                <p><strong>Exemplo:</strong></p>
+                <pre><code>
+    Este é um texto<br>
+    com uma quebra de linha forçada.
+                </code></pre>
+            </li>
+            <li>
+                <h4><code>&lt;hr&gt;</code> (Linha Horizontal):</h4>
+                <p>A tag <code>&lt;hr&gt;</code> (horizontal rule) cria uma linha horizontal que pode ser usada para
+                    separar visualmente diferentes seções de conteúdo.</p>
+                <p><strong>Exemplo:</strong></p>
+                <pre><code>
+    &lt;p&gt;Primeira seção do conteúdo.&lt;/p&gt;
+    &lt;hr&gt;
+    &lt;p&gt;Segunda seção do conteúdo.&lt;/p&gt;
+                </code></pre>
+            </li>
+            <li>
+                <h4>Tags de Formatação Semântica:</h4>
+                <ul>
+                    <li>
+                        <h5><code>&lt;strong&gt;</code> (Texto Importante):</h5>
+                        <p>Indica que o texto tem forte importância, seriedade ou urgência. Os navegadores geralmente
+                            exibem esse texto em negrito.</p>
+                        <p><strong>Exemplo:</strong>
+                            <code>&lt;p&gt;Esta é uma informação &lt;strong&gt;muito importante&lt;/strong&gt;.&lt;/p&gt;</code>
+                        </p>
+                    </li>
+                    <li>
+                        <h5><code>&lt;em&gt;</code> (Ênfase):</h5>
+                        <p>Indica ênfase no texto. Os navegadores geralmente exibem esse texto em itálico.</p>
+                        <p><strong>Exemplo:</strong>
+                            <code>&lt;p&gt;Você &lt;em&gt;precisa&lt;/em&gt; ver este ponto.&lt;/p&gt;</code>
+                        </p>
+                    </li>
+                    <li>
+                        <h5><code>&lt;mark&gt;</code> (Texto Marcado):</h5>
+                        <p>Representa texto marcado ou destacado para referência ou anotação.</p>
+                        <p><strong>Exemplo:</strong>
+                            <code>&lt;p&gt;A palavra chave é &lt;mark&gt;HTML&lt;/mark&gt;.&lt;/p&gt;</code>
+                        </p>
+                    </li>
+                    <li>
+                        <h5><code>&lt;small&gt;</code> (Texto Menor):</h5>
+                        <p>Representa um comentário lateral pequeno, como informações de direitos autorais ou outros
+                            avisos.</p>
+                        <p><strong>Exemplo:</strong>
+                            <code>&lt;p&gt;&lt;small&gt;© 2023 Meu Site&lt;/small&gt;&lt;/p&gt;</code>
+                        </p>
+                    </li>
+                    <li>
+                        <h5><code>&lt;del&gt;</code> (Texto Deletado):</h5>
+                        <p>Representa texto que foi deletado do documento. Os navegadores geralmente o exibem riscado.
+                        </p>
+                        <p><strong>Exemplo:</strong>
+                            <code>&lt;p&gt;Preço antigo: &lt;del&gt;R$ 29,90&lt;/del&gt; Novo preço: R$ 19,90&lt;/p&gt;</code>
+                        </p>
+                    </li>
+                    <li>
+                        <h5><code>&lt;ins&gt;</code> (Texto Inserido):</h5>
+                        <p>Representa texto que foi inserido no documento. Os navegadores geralmente o exibem
+                            sublinhado.</p>
+                        <p><strong>Exemplo:</strong>
+                            <code>&lt;p&gt;Agora com &lt;ins&gt;novas funcionalidades&lt;/ins&gt;!&lt;/p&gt;</code>
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h4>Tags para Citações e Código:</h4>
+                <ul>
+                    <li>
+                        <h5><code>&lt;blockquote&gt;</code> (Citação em Bloco):</h5>
+                        <p>Usada para citar uma seção longa de outro recurso. Os navegadores geralmente a renderizam com
+                            recuo.</p>
+                        <p><strong>Exemplo:</strong></p>
+                        <pre><code>
+    &lt;blockquote cite="https://www.exemplo.com/artigo"&gt;
+      <p>Esta é uma citação longa de um artigo externo.</p>
+    &lt;/blockquote&gt;
+                        </code></pre>
+                    </li>
+                    <li>
+                        <h5><code>&lt;q&gt;</code> (Citação Curta):</h5>
+                        <p>Usada para citações curtas que não precisam de quebra de linha.</p>
+                        <p><strong>Exemplo:</strong>
+                            <code>&lt;p&gt;Como diz o ditado, &lt;q&gt;água mole em pedra dura, tanto bate até que fura.&lt;/q&gt;&lt;/p&gt;</code>
+                        </p>
+                    </li>
+                    <li>
+                        <h5><code>&lt;pre&gt;</code> (Texto Pré-formatado):</h5>
+                        <p>Exibe o texto exatamente como foi escrito no código HTML, preservando espaços em branco e
+                            quebras de linha. É útil para exibir código.</p>
+                        <p><strong>Exemplo:</strong></p>
+                        <pre><code>
+    function minhaFuncao() {
+      console.log("Olá!");
+    }
+                        </code></pre>
+                    </li>
+                    <li>
+                        <h5><code>&lt;code&gt;</code> (Fragmento de Código):</h5>
+                        <p>Usada para marcar pequenos trechos de código dentro de um texto.</p>
+                        <p><strong>Exemplo:</strong>
+                            <code>Para imprimir algo no console, use a função &lt;code&gt;console.log()&lt;/code&gt;.</code>
+                        </p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Considerações Importantes:</h3>
+        <ul>
+            <li>Use as tags de cabeçalho (<code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>) de forma hierárquica para
+                estruturar o conteúdo da sua página. <code>&lt;h1&gt;</code> deve ser usado para o título principal.
+            </li>
+            <li>Escolha as tags semânticas (como <code>&lt;strong&gt;</code> e <code>&lt;em&gt;</code>) para transmitir
+                o significado do texto, em vez de usar apenas tags de apresentação (como <code>&lt;b&gt;</code> para
+                negrito e <code>&lt;i&gt;</code> para itálico), a menos que a intenção seja puramente estilística.</li>
+            <li>Mantenha o conteúdo textual legível e bem organizado para melhorar a experiência do usuário e a
+                acessibilidade.</li>
+        </ul>
+
+        <h3>Tipos de Input de Texto em HTML</h3>
+
+        <p>A tag <code>&lt;input&gt;</code> é um dos elementos de formulário mais poderosos e versáteis do HTML. O
+            atributo <code>type</code> dentro da tag <code>&lt;input&gt;</code> define o tipo de controle de entrada a
+            ser exibido. Para campos de texto, existem diversos valores para o atributo <code>type</code> que oferecem
+            funcionalidades específicas.</p>
+
+        <p>Principais Tipos de Input de Texto:</p>
+        <ul>
+            <li>
+                <h4><code>type="text"</code> (Texto Simples):</h4>
+                <p><strong>O que faz:</strong> Cria um campo de entrada de texto de linha única para entrada de texto
+                    genérico, como nomes, endereços curtos, etc.</p>
+                <p><strong>Características:</strong> Não possui validação específica ou formatação automática.</p>
+                <p><strong>Exemplo:</strong></p>
+                <pre><code>
+    &lt;label for="nome">Nome:</label>&lt;br&gt;
+    &lt;input type="text" id="nome" name="nome"&gt;
+                </code></pre>
+            </li>
+            <li>
+                <h4><code>type="password"</code> (Senha):</h4>
+                <p><strong>O que faz:</strong> Cria um campo de entrada para senhas. Os caracteres digitados são
+                    geralmente mascarados (substituídos por asteriscos ou bolinhas) para segurança.</p>
+                <p><strong>Características:</strong> O valor digitado não é exibido diretamente na tela.</p>
+                <p><strong>Exemplo:</strong></p>
+                <pre><code>
+    &lt;label for="senha">Senha:</label>&lt;br&gt;
+    &lt;input type="password" id="senha" name="senha"&gt;
+                </code></pre>
+            </li>
+            <li>
+                <h4><code>type="email"</code> (E-mail):</h4>
+                <p><strong>O que faz:</strong> Cria um campo de entrada otimizado para endereços de e-mail. Os
+                    navegadores modernos geralmente performam uma validação básica para garantir que o texto inserido
+                    segue o formato de um e-mail válido (ex: <code>alguma coisa@dominio.com</code>).</p>
+                <p><strong>Características:</strong> Validação básica de formato de e-mail.</p>
+                <p><strong>Exemplo:</strong></p>
+                <pre><code>
+    &lt;label for="email">E-mail:</label>&lt;br&gt;
+    &lt;input type="email" id="email" name="email"&gt;
+                </code></pre>
+            </li>
+            <li>
+                <h4><code>type="number"</code> (Número):</h4>
+                <p><strong>O que faz:</strong> Cria um campo de entrada para números. Os navegadores geralmente exibem
+                    controles para aumentar e diminuir o valor e podem impedir a entrada de caracteres não numéricos.
+                </p>
+                <p><strong>Características:</strong> Validação para entrada numérica, atributos como <code>min</code>,
+                    <code>max</code> e <code>step</code> podem ser usados para restringir os valores.
+                </p>
+                <p><strong>Exemplo:</strong></p>
+                <pre><code>
+    &lt;label for="idade">Idade:</label>&lt;br&gt;
+    &lt;input type="number" id="idade" name="idade" min="0" max="150"&gt;
+                </code></pre>
+            </li>
+            <li>
+                <h4><code>type="tel"</code> (Telefone):</h4>
+                <p><strong>O que faz:</strong> Cria um campo de entrada para números de telefone. Embora não imponha um
+                    formato específico por padrão, navegadores em dispositivos móveis podem otimizar o teclado para
+                    entrada de números de telefone.</p>
+                <p><strong>Características:</strong> Otimização do teclado em dispositivos móveis.</p>
+                <p><strong>Exemplo:</strong></p>
+                <pre><code>
+    &lt;label for="telefone">Telefone:</label>&lt;br&gt;
+    &lt;input type="tel" id="telefone" name="telefone"&gt;
+                </code></pre>
+            </li>
+            <li>
+                <h4><code>type="url"</code> (URL):</h4>
+                <p><strong>O que faz:</strong> Cria um campo de entrada otimizado para URLs (endereços web). Os
+                    navegadores modernos geralmente performam uma validação básica para garantir que o texto inserido
+                    segue o formato de um URL válido (ex: <code>https://www.exemplo.com</code>).</p>
+                <p><strong>Características:</strong> Validação básica de formato de URL.</p>
+                <p><strong>Exemplo:</strong></p>
+                <pre><code>
+    &lt;label for="website">Website:</label>&lt;br&gt;
+    &lt;input type="url" id="website" name="website"&gt;
+                </code></pre>
+            </li>
+            <li>
+                <h4><code>type="search"</code> (Busca):</h4>
+                <p><strong>O que faz:</strong> Cria um campo de entrada para termos de busca. Alguns navegadores podem
+                    exibir um ícone de "limpar" (um "X") dentro do campo.</p>
+                <p><strong>Características:</strong> Aparência otimizada para busca (ícone de limpar em alguns
+                    navegadores).</p>
+                <p><strong>Exemplo:</strong></p>
+                <pre><code>
+    &lt;label for="busca">Buscar:</label>&lt;br&gt;
+    &lt;input type="search" id="busca" name="busca"&gt;
+                </code></pre>
+            </li>
+            <li>
+                <h4><code>type="range"</code> (Faixa):</h4>
+                <p><strong>O que faz:</strong> Cria um controle deslizante que permite ao usuário selecionar um valor
+                    dentro de um intervalo.</p>
+                <p><strong>Características:</strong> Representação visual de uma faixa de valores, atributos como
+                    <code>min</code>, <code>max</code> e <code>step</code> são importantes.
+                </p>
+                <p><strong>Exemplo:</strong></p>
+                <pre><code>
+    &lt;label for="volume">Volume:</label>&lt;br&gt;
+    &lt;input type="range" id="volume" name="volume" min="0" max="100" step="10"&gt;
+                </code></pre>
+            </li>
+            <li>
+                <h4><code>&lt;textarea&gt;</code> (Área de Texto Multilinha):</h4>
+                <p><strong>O que faz:</strong> Cria um campo de entrada de texto com várias linhas.</p>
+                <p><strong>Características:</strong> Permite a entrada de texto em múltiplas linhas, atributos como
+                    <code>rows</code> e <code>cols</code> definem as dimensões iniciais.
+                </p>
+                <p><strong>Exemplo:</strong></p>
+                <pre><code>
+    &lt;label for="mensagem">Mensagem:</label>&lt;br&gt;
+    &lt;textarea id="mensagem" name="mensagem" rows="5" cols="30"&gt;&lt;/textarea&gt;
+                </code></pre>
+            </li>
+        </ul>
+
+        <h3>Atributos Comuns a Inputs de Texto:</h3>
+        <ul>
+            <li><code>id</code>: Identificador único do elemento.</li>
+            <li><code>name</code>: Nome do elemento (usado para enviar dados do formulário).</li>
+            <li><code>value</code>: Valor inicial do campo.</li>
+            <li><code>placeholder</code>: Texto de dica exibido quando o campo está vazio.</li>
+            <li><code>required</code>: Especifica que o campo deve ser preenchido antes de enviar o formulário.</li>
+            <li><code>readonly</code>: Especifica que o campo é somente leitura.</li>
+            <li><code>disabled</code>: Especifica que o campo está desabilitado e não pode ser editado nem enviado.</li>
+            <li><code>maxlength</code>: Especifica o número máximo de caracteres permitidos no campo.</li>
+            <li><code>minlength</code>: Especifica o número mínimo de caracteres necessários no campo.</li>
+            <li><code>size</code>: Especifica a largura visível do campo (em caracteres).</li>
+        </ul>
+
+        <p>A escolha do tipo de input correto é crucial para fornecer uma boa experiência de usuário e garantir a
+            integridade dos dados do formulário.</p>
+
+
+        <br>
+        <h2 id="Listas">Listas ordenadas e não ordenadas</h2>
+        <small><a href="#Índice">(<i>Voltar</i>)</a></small>
+
+
+        <p>O HTML oferece duas tags principais para criar listas de itens:</p>
+        <ul>
+            <li><strong>Listas Não Ordenadas (Unordered Lists):</strong> Usadas para exibir itens em uma lista onde a
+                ordem não é importante. Os itens são geralmente precedidos por marcadores (bullets).</li>
+            <li><strong>Listas Ordenadas (Ordered Lists):</strong> Usadas para exibir itens em uma sequência específica.
+                Os itens são numerados ou precedidos por letras.</li>
+        </ul>
+
+        <h3>Listas Não Ordenadas (<code>&lt;ul&gt;</code>):</h3>
+        <p>A tag <code>&lt;ul&gt;</code> (unordered list) define uma lista não ordenada. Cada item da lista dentro de
+            uma lista não ordenada é definido pela tag <code>&lt;li&gt;</code> (list item).</p>
+
+        <h4>Exemplo de Lista Não Ordenada:</h4>
+        <pre><code>
+&lt;ul&gt;
+  &lt;li&gt;Café&lt;/li&gt;
+  &lt;li&gt;Chá&lt;/li&gt;
+  &lt;li&gt;Leite&lt;/li&gt;
+&lt;/ul&gt;
+    </code></pre>
+        <p><strong>Resultado no navegador:</strong></p>
+        <ul>
+            <li>Café</li>
+            <li>Chá</li>
+            <li>Leite</li>
+        </ul>
+
+        <h4>Atributos da tag <code>&lt;ul&gt;</code> (Obsolescente em HTML5, use CSS para estilização):</h4>
+        <ul>
+            <li><code>type</code>: Especificava o tipo de marcador a ser usado (<code>disc</code>, <code>circle</code>,
+                <code>square</code>). Este atributo não é mais recomendado em HTML5; a estilização deve ser feita com
+                CSS.
+            </li>
+        </ul>
+
+        <h3>Listas Ordenadas (<code>&lt;ol&gt;</code>):</h3>
+        <p>A tag <code>&lt;ol&gt;</code> (ordered list) define uma lista ordenada. Assim como nas listas não ordenadas,
+            cada item da lista é definido pela tag <code>&lt;li&gt;</code>.</p>
+
+        <h4>Exemplo de Lista Ordenada:</h4>
+        <pre><code>
+&lt;ol&gt;
+  &lt;li&gt;Primeiro passo&lt;/li&gt;
+  &lt;li&gt;Segundo passo&lt;/li&gt;
+  &lt;li&gt;Terceiro passo&lt;/li&gt;
+&lt;/ol&gt;
+    </code></pre>
+        <p><strong>Resultado no navegador:</strong></p>
+        <ol>
+            <li>Primeiro passo</li>
+            <li>Segundo passo</li>
+            <li>Terceiro passo</li>
+        </ol>
+
+        <h4>Atributos da tag <code>&lt;ol&gt;</code>:</h4>
+        <ul>
+            <li><code>type</code>: Especifica o tipo de numeração a ser usado:
+                <ul>
+                    <li><code>1</code> (padrão): Números (1, 2, 3, ...)</li>
+                    <li><code>A</code>: Letras maiúsculas (A, B, C, ...)</li>
+                    <li><code>a</code>: Letras minúsculas (a, b, c, ...)</li>
+                    <li><code>I</code>: Algarismos romanos maiúsculos (I, II, III, ...)</li>
+                    <li><code>i</code>: Algarismos romanos minúsculos (i, ii, iii, ...)</li>
+                </ul>
+            </li>
+            <li><code>start</code>: Especifica o número ou letra inicial da lista. Por exemplo,
+                <code>&lt;ol start="5"&gt;</code> começará a lista com o número 5.
+            </li>
+            <li><code>reversed</code>: Especifica que a lista deve ser exibida em ordem decrescente (do último item para
+                o primeiro). É um atributo booleano (presente ou ausente).</li>
+        </ul>
+
+        <h4>Exemplo de Lista Ordenada com Atributos:</h4>
+        <pre><code>
+&lt;ol type="A" start="3" reversed&gt;
+  &lt;li&gt;Item C&lt;/li&gt;
+  &lt;li&gt;Item B&lt;/li&gt;
+  &lt;li&gt;Item A&lt;/li&gt;
+&lt;/ol&gt;
+    </code></pre>
+        <p><strong>Resultado no navegador:</strong></p>
+        <ol type="A" start="3" reversed>
+            <li>Item C</li>
+            <li>Item B</li>
+            <li>Item A</li>
+        </ol>
+
+        <h3>Aninhando Listas:</h3>
+        <p>É possível aninhar listas umas dentro das outras para criar estruturas mais complexas.</p>
+
+        <h4>Exemplo de Listas Aninhadas:</h4>
+        <pre><code>
+&lt;ul&gt;
+  &lt;li&gt;Bebidas&lt;/li&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Quentes&lt;/li&gt;
+    &lt;ol type="1"&gt;
+      &lt;li&gt;Café&lt;/li&gt;
+      &lt;li&gt;Chá&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;li&gt;Frias&lt;/li&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Suco&lt;/li&gt;
+      &lt;li&gt;Refrigerante&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/ul&gt;
+  &lt;li&gt;Comidas&lt;/li&gt;
+&lt;/ul&gt;
+    </code></pre>
+        <p><strong>Resultado no navegador:</strong></p>
+        <ul>
+            <li>Bebidas
+                <ul>
+                    <li>Quentes
+                        <ol type="1">
+                            <li>Café</li>
+                            <li>Chá</li>
+                        </ol>
+                    </li>
+                    <li>Frias
+                        <ul>
+                            <li>Suco</li>
+                            <li>Refrigerante</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Comidas</li>
+        </ul>
+
+        <h3>Considerações Importantes:</h3>
+        <ul>
+            <li>Use <code>&lt;ul&gt;</code> quando a ordem dos itens não for significativa.</li>
+            <li>Use <code>&lt;ol&gt;</code> quando a ordem dos itens for importante (passos, sequências, etc.).</li>
+            <li>A tag <code>&lt;li&gt;</code> é essencial para definir cada item dentro de uma lista
+                <code>&lt;ul&gt;</code> ou <code>&lt;ol&gt;</code>.
+            </li>
+            <li>Para estilização avançada das listas (tipos de marcadores, numeração personalizada, etc.), utilize CSS.
+            </li>
+        </ul>
+
+        <br>
+        <h2 id="Links">Links</h2>
+        <small><a href="#Índice">(<i>Voltar</i>)</a></small>
+
+
+        <p>Os <strong>links</strong>, também conhecidos como hiperlinks, são elementos fundamentais da web. Eles
+            permitem que os usuários naveguem entre diferentes páginas, sites ou recursos online. Em HTML, a tag
+            responsável pela criação de links é a tag de âncora: <code>&lt;a&gt;</code>.</p>
+
+        <h3>A Tag <code>&lt;a&gt;</code> (Âncora):</h3>
+        <p>A tag <code>&lt;a&gt;</code> cria um hiperlink para outras páginas da web, arquivos, locais dentro da mesma
+            página, endereços de e-mail ou qualquer outro URL.</p>
+
+        <h4>Atributo Essencial: <code>href</code></h4>
+        <p>O atributo mais importante da tag <code>&lt;a&gt;</code> é o <code>href</code> (hypertext reference). Ele
+            especifica o destino do link.</p>
+
+        <h5>Exemplos de Uso do Atributo <code>href</code>:</h5>
+        <ul>
+            <li>
+                <h6>Link para outra página web:</h6>
+                <pre><code>
+&lt;a href="https://www.exemplo.com"&gt;Visite Exemplo.com&lt;/a&gt;
+            </code></pre>
+                <p>Este código cria um link clicável com o texto "Visite Exemplo.com" que direciona o usuário para o
+                    site <code>https://www.exemplo.com</code>.</p>
+            </li>
+            <li>
+                <h6>Link para um arquivo dentro do mesmo site:</h6>
+                <pre><code>
+&lt;a href="/imagens/logo.png"&gt;Veja nosso logo&lt;/a&gt;
+            </code></pre>
+                <p>Este código cria um link para um arquivo de imagem chamado <code>logo.png</code> localizado na pasta
+                    <code>imagens</code> dentro do mesmo site.
+                </p>
+            </li>
+            <li>
+                <h6>Link para uma seção específica dentro da mesma página (âncora interna):</h6>
+                <pre><code>
+&lt;h2 id="sobre">Sobre Nós</h3>
+&lt;p&gt;Informações sobre a nossa empresa...&lt;/p&gt;
+&lt;a href="#sobre"&gt;Ir para a seção Sobre Nós&lt;/a&gt;
+            </code></pre>
+                <p>Aqui, o atributo <code>href</code> começa com um símbolo <code>#</code> seguido pelo <code>id</code>
+                    de outro elemento na mesma página. Ao clicar no link, o navegador rolará até a seção com o
+                    <code>id</code> correspondente.
+                </p>
+            </li>
+            <li>
+                <h6>Link para um endereço de e-mail:</h6>
+                <pre><code>
+&lt;a href="mailto:contato@exemplo.com"&gt;Entre em contato por e-mail&lt;/a&gt;
+            </code></pre>
+                <p>Ao clicar neste link, o navegador tentará abrir o programa de e-mail padrão do usuário com o endereço
+                    <code>contato@exemplo.com</code> no campo "Para".
+                </p>
+            </li>
+            <li>
+                <h6>Link para fazer uma chamada telefônica (em dispositivos móveis):</h6>
+                <pre><code>
+&lt;a href="tel:+5534999999999"&gt;Ligue para nós&lt;/a&gt;
+            </code></pre>
+                <p>Em dispositivos móveis, ao clicar neste link, o sistema operacional pode oferecer a opção de fazer
+                    uma chamada para o número de telefone especificado.</p>
+            </li>
+        </ul>
+
+        <h4>Atributos Adicionais Úteis:</h4>
+        <ul>
+            <li>
+                <h5><code>target</code></h5>
+                <p>Especifica onde abrir o link.</p>
+                <ul>
+                    <li><code>_blank</code>: Abre o link em uma nova janela ou aba do navegador.</li>
+                    <li><code>_self</code> (padrão): Abre o link na mesma janela ou aba.</li>
+                    <li><code>_parent</code>: Abre o link no frame pai.</li>
+                    <li><code>_top</code>: Abre o link na janela inteira (removendo quaisquer frames).</li>
+                </ul>
+                <p><strong>Exemplo:</strong>
+                    <code>&lt;a href="https://www.exemplo.com" target="_blank"&gt;Visite em nova aba&lt;/a&gt;</code>
+                </p>
+            </li>
+            <li>
+                <h5><code>title</code></h5>
+                <p>Define um texto que é exibido como uma dica de ferramenta (tooltip) quando o mouse passa sobre o
+                    link.</p>
+                <p><strong>Exemplo:</strong>
+                    <code>&lt;a href="#" title="Link para a página inicial"&gt;Home&lt;/a&gt;</code>
+                </p>
+            </li>
+            <li>
+                <h5><code>rel</code></h5>
+                <p>Especifica a relação entre o documento atual e o documento vinculado. É útil para SEO e segurança.
+                </p>
+                <ul>
+                    <li><code>noopener</code>: Impede que a nova página tenha acesso ao objeto
+                        <code>window.opener</code> da página original, melhorando a segurança.
+                    </li>
+                    <li><code>noreferrer</code>: Impede que a nova página receba informações de referência (de onde o
+                        usuário veio). Também implica em <code>noopener</code>.</li>
+                    <li><code>nofollow</code>: Sinaliza para os mecanismos de busca que o link não deve influenciar o
+                        ranking da página de destino (útil para conteúdo gerado por usuários).</li>
+                </ul>
+                <p><strong>Exemplo:</strong>
+                    <code>&lt;a href="https://www.exemplo.com" target="_blank" rel="noopener noreferrer"&gt;Link seguro&lt;/a&gt;</code>
+                </p>
+            </li>
+            <li>
+                <h5>Conteúdo do Link</h5>
+                <p>O texto ou outros elementos (como imagens) que ficam entre a tag de abertura <code>&lt;a&gt;</code> e
+                    a tag de fechamento <code>&lt;/a&gt;</code> se tornam o conteúdo clicável do link.</p>
+                <p><strong>Exemplo com imagem como link:</strong>
+                    <code>&lt;a href="https://www.exemplo.com"&gt;&lt;img src="logo.png" alt="Logo do Exemplo"&gt;&lt;/a&gt;</code>
+                </p>
+            </li>
+        </ul>
+
+        <h3>Melhores Práticas para Links:</h3>
+        <ul>
+            <li>Use texto descritivo para os links, para que os usuários saibam para onde serão direcionados. Evite
+                frases genéricas como "Clique aqui".</li>
+            <li>Use o atributo <code>title</code> para fornecer informações adicionais sobre o link.</li>
+            <li>Considere usar <code>target="_blank"</code> com cuidado, pois pode confundir alguns usuários.
+                Geralmente, é mais intuitivo abrir links externos em novas abas e links internos na mesma aba.</li>
+            <li>Use os atributos <code>rel="noopener noreferrer"</code> para links que abrem em novas abas por questões
+                de segurança e privacidade.</li>
+            <li>Verifique regularmente se seus links estão funcionando corretamente.</li>
+        </ul>
+
+        <br>
+        <h2 id="Contato">Contato Instrutor</h2>
+        <small><a href="#Contato">(<i>Voltar</i>)</a></small>
+        <p><strong>Perfil profissional:</strong> <a href="https://linkedin.com/in/diogomainardes" target="_blank"
+                rel="noopener noreferrer">linkedin.com/in/diogomainardes</a></p>
+        <p><strong>Twitch:</strong> <a href="https://twitch.tv/dimmbr" target="_blank"
+                rel="noopener noreferrer">twitch.tv/dimmbr</a></p>
+        <p><span style="font-weight: bold; color: #555;">@diogomainardes.dev</span></p><br>
+
+        <h2 id="Bibliografia">Bibliografia e Sites Recomendados para HTML</h2>
+        <small><a href="#Índice">(<i>Voltar</i>)</a></small>
+
+
+
+        <p>Para aprofundar seus conhecimentos em HTML, tanto em termos de livros quanto de recursos online, aqui estão
+            algumas sugestões de bibliografia e principais sites recomendados:</p>
+
+        <h3>Bibliografia (Livros):</h3>
+        <ol>
+            <li>
+                <h4>"HTML e CSS: Projetos Visuais" de Jon Duckett</h4>
+                <p>Um livro visualmente atraente que explica HTML e CSS de forma clara e prática, com muitos exemplos
+                    visuais. Ótimo para iniciantes e aprendizado visual.</p>
+            </li>
+            <li>
+                <h4>"HTML5 e CSS3 Essencial" de Maurício Samy Silva</h4>
+                <p>Um livro em português, abrangente e atualizado, que cobre desde os fundamentos até os recursos
+                    avançados do HTML5 e CSS3. Excelente referência em português.</p>
+            </li>
+            <li>
+                <h4>"Learning Web Development with HTML, CSS, and JavaScript" de Jennifer Robbins</h4>
+                <p>Um livro completo que aborda os três pilares do desenvolvimento web. A seção de HTML é detalhada e
+                    oferece uma boa base para iniciantes.</p>
+            </li>
+            <li>
+                <h4>"HTML5: The Missing Manual" de David Sawyer McFarland</h4>
+                <p>Um guia prático que cobre todos os aspectos do HTML5, com muitos exemplos e dicas para solucionar
+                    problemas comuns.</p>
+            </li>
+        </ol>
+
+        <h3>Principais Sites para Conhecimento em HTML (Recomendados):</h3>
+        <ul>
+            <li>
+                <h4><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank"
+                        rel="noopener noreferrer">MDN Web Docs (Mozilla Developer Network)</a></h4>
+                <p>Considerada a melhor e mais completa documentação para tecnologias web. Oferece explicações
+                    detalhadas, exemplos, tutoriais e referências para todas as tags e atributos HTML. Disponível em
+                    português.</p>
+            </li>
+            <li>
+                <h4><a href="https://www.w3schools.com/html/" target="_blank" rel="noopener noreferrer">W3Schools</a>
+                </h4>
+                <p>Um site muito popular para aprender HTML (e outras tecnologias web) de forma interativa. Oferece
+                    tutoriais passo a passo, exemplos editáveis e questionários. Disponível em diversas línguas,
+                    incluindo português.</p>
+            </li>
+            <li>
+                <h4><a href="https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/"
+                        target="_blank" rel="noopener noreferrer">freeCodeCamp</a></h4>
+                <p>Plataforma de aprendizado online gratuita com um currículo abrangente. A seção de HTML é bem
+                    estruturada e ensina de forma prática através de desafios interativos. Disponível em inglês com
+                    legendas em português.</p>
+            </li>
+            <li>
+                <h4><a href="https://caniuse.com/" target="_blank" rel="noopener noreferrer">Can I use... Support tables
+                        for HTML5, CSS3, etc.</a></h4>
+                <p>Ferramenta essencial para verificar o suporte de tags e atributos HTML nos diversos navegadores e
+                    suas versões.</p>
+            </li>
+            <li>
+                <h4><a href="https://html.com/" target="_blank" rel="noopener noreferrer">HTML.com</a></h4>
+                <p>Um site dedicado ao HTML, oferecendo tutoriais, guias e referências de forma clara e organizada.
+                    Disponível em inglês.</p>
+            </li>
+            <li>
+                <h4><a href="https://www.devmedia.com.br/html/1" target="_blank" rel="noopener noreferrer">DevMedia
+                        (Brasil)</a></h4>
+                <p>Portal brasileiro com diversos artigos, tutoriais e cursos sobre desenvolvimento web, incluindo HTML.
+                    Conteúdo em português.</p>
+            </li>
+        </ul>
+
+        <h3>Recomendação:</h3>
+        <p>Para começar e ter uma referência constante, sugiro fortemente explorar o <a
+                href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank" rel="noopener noreferrer">MDN
+                Web Docs</a> e o <a href="https://www.w3schools.com/html/" target="_blank"
+                rel="noopener noreferrer">W3Schools</a>. O MDN é detalhado e preciso, enquanto o W3Schools é ótimo para
+            aprendizado prático e rápido. <a
+                href="https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/" target="_blank"
+                rel="noopener noreferrer">freeCodeCamp</a> também é excelente para aprendizado estruturado.</p>
+
+        <p>Lembre-se que a prática é fundamental. Experimente o código, modifique os exemplos e crie seus próprios
+            projetos para solidificar o aprendizado. Boa jornada no mundo do HTML!</p>
+
+        <br>
+
+    </body>
+
+</html>
